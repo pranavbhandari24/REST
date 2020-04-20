@@ -10,7 +10,7 @@ var queueSvc = azure.createQueueService(config.azureStorageAccount, config.azure
 const CosmosClient = require("@azure/cosmos").CosmosClient
 
 //Queue Connection
-queueSvc.createQueueIfNotExists('queue', (error, result, response) => {
+queueSvc.createQueueIfNotExists('consumablequeue', (error, result, response) => {
     if(error) {
         console.log(error)
     }

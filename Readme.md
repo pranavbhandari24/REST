@@ -19,7 +19,10 @@ This server is created using express in nodejs. It is used to connect to cosmosd
     * username
     * lat
     * lon
-    * beacon_uuid (optional: -1 should be send if there is no uuid.)
+    * beacon_uuid   (optional: -1 should be send if there is no beacon detected.)
+    * major         (optional: -1 should be send if there is no beacon detected.)
+    * minor         (optional: -1 should be send if there is no beacon detected.)
+    * range         (optional: -1 should be send if there is no beacon detected.)
 6. POST /adduser  
     This endpoint connects to the cosmosdb in azure and creates a user using the json received.
     Expected Data as JSON:
@@ -45,3 +48,6 @@ This server is created using express in nodejs. It is used to connect to cosmosd
     * username
     * locationname
     * message
+
+## Note
+The names of the elements in each JSON endpoint should be strictly followed. (All Lowercase)
